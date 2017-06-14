@@ -4,6 +4,7 @@
 
 fun main(args: Array<String>) {
     ctrl("sum", 2, 1)
+    ctrl("pow2", 2, 0)
 }
 
 fun ctrl(call: String, a: Int, b: Int) {
@@ -35,11 +36,8 @@ fun pow2(a: Int): Int {
 }
 
 fun pow(a: Int, b: Int): Int {
-    var count = 1
     var result = a
-    while (count < b) {
+    for (count in 2..b)
         result *= a
-        count++
-    }
     return result
 }
